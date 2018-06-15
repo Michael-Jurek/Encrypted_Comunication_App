@@ -124,7 +124,7 @@ def setAESKeyBob(s, host, port, KprB):
 		return False
 	print("\nSecret key for AES was accepted and decrypted (Kaes)")
 
-	Kaes = rsa.decrypt(b64decode(received), KprB)
+	Kaes = KprB.decrypt(b64decode(received))
 
 	conn.send("OK".encode())
 	input("\nAnswer send: OK")
