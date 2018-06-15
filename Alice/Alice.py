@@ -136,7 +136,7 @@ def validateFile(mySocket, host, port, path):
 	mySocket.connect((host,port))
 	encryptedDoc = (path.rstrip(".txt") + ".enc")
 	try:
-		sendFile(mySocket, encryptedPrimes)
+		sendFile(mySocket, encryptedDoc)
 	except:
 		logging.error(traceback.format_exc())
 		input()
