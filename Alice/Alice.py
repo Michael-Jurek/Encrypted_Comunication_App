@@ -106,7 +106,8 @@ def setAESKey(s, host, port, KpubB):
 
 	s.connect((host,port))
 
-	encrypted = b64encode(rsa.encrypt(Kaes, KpubB))
+	encrypted = KpubB.encrypt(Kaes, 'K')
+	encrypted = encrypted[0]
 	s.send(encrypted)
 
 	print("\n Private key for AES was encrypted and send (Kaes)")
