@@ -102,7 +102,6 @@ def changeCertificatesAlice(s, host, port, KpubA, sig_KpubA, KpubCA, newtime):
 
 def setAESKey(s, host, port, KpubB):
 	Kaes = aes.genKey()
-	print("\n" + str(Kaes) + "\n")
 
 	s.connect((host,port))
 
