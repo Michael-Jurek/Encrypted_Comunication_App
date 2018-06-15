@@ -44,7 +44,7 @@ def AESDecryptFile(key, inFile, outFile, chunkSize=64*1024):
 	"""
 	Function that decrypts file inFile
 	"""
-	with open(inFile, 'rb') as inutF:
+	with open(inFile, 'rb') as inputF:
 		with open(outFile, 'w') as outF:
 			while True:
 				chunk = inputF.read(chunkSize)
