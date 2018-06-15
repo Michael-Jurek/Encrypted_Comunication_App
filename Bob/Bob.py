@@ -142,7 +142,7 @@ def pathsToFiles():
 			continue
 		else:
 			break
-	os.mkdir(os.path.dirname(relPath), exist_ok=True)
+	os.mkdir(relPath)
 	pathEncrypted = relPath + 'encryptedDoc.enc'
 	pathDecrypted = relPath + 'decryptedDoc.txt'
 	pathResult = relPath + 'answer.txt'
